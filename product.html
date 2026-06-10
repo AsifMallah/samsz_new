@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Products — SamsZ Ice Cream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Explore SamsZ Ice Cream's full product range — Ice Pop, Cups, Popsicle, Chocbars, Kulfa, Bricks &amp; Conezilla. Order via WhatsApp from Karachi, Pakistan.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-outline" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar-samsz" id="navbar" aria-label="Main navigation">
+      <div class="navbar-inner">
+        <a href="index.html" class="nav-logo" aria-label="SamsZ Home"><img src="img/samsz-logo.png" alt="SamsZ Logo"
+            width="70"></a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html" class="active">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="nav-cta" id="nav-contact-btn">Order Now</a></li>
+        </ul>
+        <button class="nav-hamburger" id="hamburger"
+          aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <button type="button" class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="mobile-menu-inner">
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="gradient-mesh" aria-hidden="true"></div>
+    <div class="particles-bg" aria-hidden="true"></div>
+    <div class="floating-icons" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <h1 class="page-hero-title" id="page-title">Our <span class="accent">Products</span></h1>
+      <div class="breadcrumb-samsz" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Products</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="products-section section-pad" id="all-products" aria-labelledby="products-heading">
+    <div class="gradient-mesh" aria-hidden="true"></div>
+    <div class="particles-bg" aria-hidden="true"></div>
+    <div class="container-samsz">
+
+      <!-- ── ICE POP BOX ── -->
+      <div style="margin-bottom:80px;" id="icepop-section">
+        <div class="reveal" style="margin-bottom:36px;">
+          <div class="section-label">Pack of 12</div>
+          <h2 class="section-heading" id="products-heading">🧊 Ice Pop <span class="accent">Box</span></h2>
+          <p class="section-subtext">Six bold fruity flavors — Rs 260 per box of 12.</p>
+        </div>
+        <div class="products-grid stagger-group">
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/WB.png" alt="Wild Blueberry Ice Pop" loading="lazy"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Ice Pop Box</div>
+              <h3 class="product-card-name">Wild Blueberry</h3>
+              <div class="product-card-price">Rs 260</div>
+              <button class="product-card-btn" onclick="orderNow('Wild Blueberry Ice Pop Box')"
+                aria-label="Order Wild Blueberry">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Order Now
+              </button>
+            </div>
+          </div>
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/DI.png" alt="Desi Imlee Ice Pop" loading="lazy"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Ice Pop Box</div>
+              <h3 class="product-card-name flavor-name-multiline">Desi Imlee &amp;<br>Aloo Bukhara</h3>
+              <div class="product-card-price">Rs 260</div>
+              <button class="product-card-btn" onclick="orderNow('Desi Imlee Ice Pop Box')"
+                aria-label="Order Desi Imlee">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Order Now
+              </button>
+            </div>
+          </div>
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/JP.png" alt="Juicy Pineapple Ice Pop" loading="lazy"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Ice Pop Box</div>
+              <h3 class="product-card-name">Juicy Pineapple</h3>
+              <div class="product-card-price">Rs 260</div>
+              <button class="product-card-btn" onclick="orderNow('Juicy Pineapple Ice Pop Box')"
+                aria-label="Order Juicy Pineapple">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Order Now
+              </button>
+            </div>
+          </div>
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/ES.png" alt="Energetic Strawberry Ice Pop" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Ice Pop Box</div>
+              <h3 class="product-card-name">Energetic Strawberry</h3>
+              <div class="product-card-price">Rs 260</div>
+              <button class="product-card-btn" onclick="orderNow('Energetic Strawberry Ice Pop Box')"
+                aria-label="Order Energetic Strawberry">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Order Now
+              </button>
+            </div>
+          </div>
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/CB.png" alt="Cola Bomb Ice Pop" loading="lazy"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Ice Pop Box</div>
+              <h3 class="product-card-name">Cola Bomb</h3>
+              <div class="product-card-price">Rs 260</div>
+              <button class="product-card-btn" onclick="orderNow('Cola Bomb Ice Pop Box')"
+                aria-label="Order Cola Bomb"><svg viewBox="0 0 24 24" width="16" height="16" fill="white"
+                  aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg> Order Now</button>
+            </div>
+          </div>
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/LF.png" alt="Lychee Fruity Ice Pop" loading="lazy"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Ice Pop Box</div>
+              <h3 class="product-card-name">Lychee Fruity</h3>
+              <div class="product-card-price">Rs 260</div>
+              <button class="product-card-btn" onclick="orderNow('Lychee Fruity Ice Pop Box')"
+                aria-label="Order Lychee Fruity"><svg viewBox="0 0 24 24" width="16" height="16" fill="white"
+                  aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg> Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── KULFA ── -->
+      <div style="margin-bottom:80px;" id="kulfa-grid">
+        <div class="reveal" style="margin-bottom:36px;">
+          <div class="section-label">Traditional Dessert</div>
+          <h2 class="section-heading">✨ Kulfa's</h2>
+          <p class="section-subtext">Classic South Asian Kulfa — creamy, rich, and utterly addictive. Rs 80 each.</p>
+        </div>
+        <div class="products-grid stagger-group">
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/BKK.png" alt="Crunchy Badami Kulfa" loading="lazy"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Kulfa's</div>
+              <h3 class="product-card-name">Crunchy Badami</h3>
+              <div class="product-card-price">Rs 80</div>
+              <button class="product-card-btn" onclick="orderNow('Crunchy Badami Kulfa')"
+                aria-label="Order Crunchy Badami"><svg viewBox="0 0 24 24" width="16" height="16" fill="white"
+                  aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg> Order Now</button>
+            </div>
+          </div>
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/PKK.png" alt="Pista Delight Kulfa" loading="lazy"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Kulfa's</div>
+              <h3 class="product-card-name">Pista Delight</h3>
+              <div class="product-card-price">Rs 80</div>
+              <button class="product-card-btn" onclick="orderNow('Pista Delight Kulfa')"
+                aria-label="Order Pista Delight"><svg viewBox="0 0 24 24" width="16" height="16" fill="white"
+                  aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg> Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── BRICKS ── -->
+      <div style="margin-bottom:80px;" id="bricks-grid">
+        <div class="reveal" style="margin-bottom:36px;">
+          <div class="section-label">Family Size</div>
+          <h2 class="section-heading">🧱 Brick <span class="accent">Packs</span></h2>
+          <p class="section-subtext">Large format bricks — perfect for families. Rs 450 each.</p>
+        </div>
+        <div class="products-grid stagger-group">
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/SBB.png" alt="Strawberry Brick" loading="lazy"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Brick Pack</div>
+              <h3 class="product-card-name">Strawberry</h3>
+              <div class="product-card-price">Rs 450</div><button class="product-card-btn"
+                onclick="orderNow('Strawberry Brick Pack')" aria-label="Order Strawberry Brick"><svg viewBox="0 0 24 24"
+                  width="16" height="16" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg> Order Now</button>
+            </div>
+          </div>
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/KBB.png" alt="Kulfa Brick" loading="lazy"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Brick Pack</div>
+              <h3 class="product-card-name">Kulfa</h3>
+              <div class="product-card-price">Rs 450</div><button class="product-card-btn"
+                onclick="orderNow('Kulfa Brick Pack')" aria-label="Order Kulfa Brick"><svg viewBox="0 0 24 24"
+                  width="16" height="16" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg> Order Now</button>
+            </div>
+          </div>
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/CBB.png" alt="Chocolate Brick" loading="lazy"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Brick Pack</div>
+              <h3 class="product-card-name">Chocolate</h3>
+              <div class="product-card-price">Rs 450</div><button class="product-card-btn"
+                onclick="orderNow('Chocolate Brick Pack')" aria-label="Order Chocolate Brick"><svg viewBox="0 0 24 24"
+                  width="16" height="16" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg> Order Now</button>
+            </div>
+          </div>
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/PBB.png" alt="Pista Brick" loading="lazy"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Brick Pack</div>
+              <h3 class="product-card-name">Pista</h3>
+              <div class="product-card-price">Rs 450</div><button class="product-card-btn"
+                onclick="orderNow('Pista Brick Pack')" aria-label="Order Pista Brick"><svg viewBox="0 0 24 24"
+                  width="16" height="16" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg> Order Now</button>
+            </div>
+          </div>
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/MBB.png" alt="Mango Brick" loading="lazy"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Brick Pack</div>
+              <h3 class="product-card-name">Mango</h3>
+              <div class="product-card-price">Rs 450</div><button class="product-card-btn"
+                onclick="orderNow('Mango Brick Pack')" aria-label="Order Mango Brick"><svg viewBox="0 0 24 24"
+                  width="16" height="16" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg> Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── CONEZILLA ── -->
+      <div style="margin-bottom:80px;" id="conezilla-grid">
+        <div class="reveal" style="margin-bottom:36px;">
+          <div class="section-label">Signature Cones</div>
+          <h2 class="section-heading">🍦 <span class="accent">Conezilla</span></h2>
+          <p class="section-subtext">The ultimate cone experience. Crispy wafer, generous scoop. Rs 80 each.</p>
+        </div>
+        <div class="products-grid stagger-group">
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/CCC.png" alt="Chocolate Conezilla" loading="lazy"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Conezilla</div>
+              <h3 class="product-card-name">Chocolate</h3>
+              <div class="product-card-price">Rs 80</div><button class="product-card-btn"
+                onclick="orderNow('Chocolate Conezilla')" aria-label="Order Chocolate Conezilla"><svg
+                  viewBox="0 0 24 24" width="16" height="16" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg> Order Now</button>
+            </div>
+          </div>
+          <div class="product-card stagger-item" data-tilt>
+            <div class="product-card-img-wrap"><img src="img/SCC.png" alt="Strawberry Conezilla" loading="lazy"
+                style="max-height:160px;width:auto;margin:auto;"></div>
+            <div class="product-card-body">
+              <div class="product-card-cat">Conezilla</div>
+              <h3 class="product-card-name">Strawberry</h3>
+              <div class="product-card-price">Rs 80</div><button class="product-card-btn"
+                onclick="orderNow('Strawberry Conezilla')" aria-label="Order Strawberry Conezilla"><svg
+                  viewBox="0 0 24 24" width="16" height="16" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg> Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-labelledby="footer-label">
+    <div class="container-samsz">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/samsz-logo.png" alt="SamsZ" loading="lazy">
+          <p class="footer-brand-text">Premium handcrafted ice cream from Karachi, Pakistan.</p>
+          <div class="footer-socials" aria-label="Social links">
+            <a href="#" class="footer-social-btn" aria-label="Twitter"><i class="fab fa-twitter"
+                aria-hidden="true"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"
+                aria-hidden="true"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="fab fa-instagram"
+                aria-hidden="true"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=923112811272" target="_blank" rel="noopener"
+              class="footer-social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-col-title" id="footer-label">Quick Links</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Get In Touch</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="tel:+923112811272">📞 +92-311-2811272</a></li>
+            <li><span style="color:var(--text-muted)">📍 Factory Outlet, Karachi</span></li>
+            <li><span style="color:var(--text-muted)">🕐 Mon–Sat: 10AM–12AM</span></li>
+            <li><a href="https://api.whatsapp.com/send?phone=923112811272" target="_blank" rel="noopener"
+                style="color:#25d366;">💬 WhatsApp Order</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 <a href="index.html">SamsZ Ice Cream</a>. All Rights Reserved.</p>
+        <p>Designed by <a href="#">Asif Ali Mallah</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://api.whatsapp.com/send?phone=923112811272&text=Hello%21%20I%20want%20to%20order%20SamsZ%20Ice%20Cream%20%F0%9F%8D%A6"
+    target="_blank" rel="noopener" class="wa-float" id="wa-float-btn" aria-label="Order on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+    <span class="wa-float-text">Order Now</span>
+  </a>
+  <a href="#" class="back-top" id="back-top-btn" aria-label="Back to top"><i class="fa fa-angle-up"
+      aria-hidden="true"></i></a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

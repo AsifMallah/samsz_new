@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>SamsZ Ice Cream — Classic &amp; Delectable</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="SamsZ Ice Cream — Premium handcrafted ice cream made with finest ingredients. Order Ice Pop, Cups, Kulfa, Bricks, Conezilla &amp; more. Factory Outlet, Karachi, Pakistan.">
+  <meta name="keywords"
+    content="SamsZ ice cream, ice cream Karachi, kulfa, ice pop, conezilla, bricks, premium ice cream Pakistan">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SamsZ Ice Cream — Classic &amp; Delectable">
+  <meta property="og:description" content="Premium handcrafted ice cream from Karachi, Pakistan.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="page-loader" role="status" aria-label="Loading">
+    <img src="img/samsz-logo.png" alt="SamsZ" class="loader-logo">
+    <div class="loader-bar">
+      <div class="loader-bar-inner"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-outline" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+  NAVBAR
+════════════════════════════════════════════ -->
+  <header>
+    <nav class="navbar-samsz" id="navbar" aria-label="Main navigation">
+      <div class="navbar-inner">
+        <a href="index.html" class="nav-logo" aria-label="SamsZ Home">
+          <img src="img/samsz-logo.png" alt="SamsZ Ice Cream Logo" width="70">
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <!--<li><a href="gallery.html">Gallery</a></li>-->
+          <li><a href="contact.html" class="nav-cta" id="nav-contact-btn">Order Now</a></li>
+        </ul>
+
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <button type="button" class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="mobile-menu-inner">
+        <ul class="nav-links" role="list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <!--<li><a href="gallery.html">Gallery</a></li>-->
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════
+  HERO SECTION
+════════════════════════════════════════════ -->
+  <section class="hero" id="hero" aria-labelledby="hero-heading">
+    <div class="gradient-mesh" aria-hidden="true"></div>
+    <div class="particles-bg" aria-hidden="true"></div>
+    <div class="floating-icons" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <!-- Text Side -->
+      <div class="hero-text">
+        <div class="hero-label" aria-label="Brand tagline">
+          <span>🍦</span> Crafted with Love Since Day One
+        </div>
+
+        <h1 class="hero-headline" id="hero-heading">
+          <span class="line"><span class="word">Premium</span></span>
+          <span class="line"><span class="word highlight">Ice Cream</span></span>
+          <span class="line"><span class="word">Made</span> <span class="word">in</span></span>
+          <span class="line"><span class="word highlight">Karachi</span></span>
+        </h1>
+
+        <p class="hero-desc">
+          Handcrafted from the finest local ingredients — every scoop of SamsZ is a journey of authentic flavor, rich
+          creaminess &amp; pure joy.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#products" class="btn-primary-samsz" id="explore-btn">
+            Explore Flavors <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=923112811272&text=Hello%21%20I%20want%20to%20order%20ice%20cream%20%F0%9F%8D%A6"
+            target="_blank" rel="noopener" class="btn-outline-samsz" id="whatsapp-hero-btn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Order on WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-stats" aria-label="Brand statistics">
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span class="count-up" data-target="7">0</span><span>+</span></div>
+            <div class="hero-stat-label">Product Lines</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span class="count-up" data-target="20">0</span><span>+</span></div>
+            <div class="hero-stat-label">Flavors</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num"><span class="count-up" data-target="1000">0</span><span>+</span></div>
+            <div class="hero-stat-label">Happy Customers</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Side -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-glow"></div>
+        <img src="img/MAINCONE.png" alt="SamsZ premium ice cream cone" class="hero-product-img" loading="eager">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+  PRODUCTS SECTION
+════════════════════════════════════════════ -->
+  <section class="products-section section-pad" id="products" aria-labelledby="products-heading">
+    <div class="gradient-mesh" aria-hidden="true"></div>
+    <div class="particles-bg" aria-hidden="true"></div>
+
+    <div class="container-samsz">
+      <div class="reveal">
+        <div class="section-label">Our Menu</div>
+        <h2 class="section-heading" id="products-heading">Every Scoop <span class="accent">Tells a Story</span></h2>
+        <p class="section-subtext">From classic Kulfa to bold Conezilla — discover our full range of premium frozen
+          treats.</p>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="category-tabs reveal" role="tablist" aria-label="Product categories" style="margin-top:40px;">
+        <button class="cat-tab active" data-target="section-icepop" role="tab" id="tab-icepop"
+          aria-controls="section-icepop" aria-selected="true">🧊 Ice Pop Box</button>
+        <button class="cat-tab" data-target="section-cups" role="tab" id="tab-cups" aria-controls="section-cups"
+          aria-selected="false">🍨 Cups</button>
+        <button class="cat-tab" data-target="section-popsicle" role="tab" id="tab-popsicle"
+          aria-controls="section-popsicle" aria-selected="false">🍡 Popsicle</button>
+        <button class="cat-tab" data-target="section-chocbar" role="tab" id="tab-chocbar"
+          aria-controls="section-chocbar" aria-selected="false">🍫 Chocbars</button>
+        <button class="cat-tab" data-target="section-kulfa" role="tab" id="tab-kulfa" aria-controls="section-kulfa"
+          aria-selected="false">✨ Kulfa's</button>
+        <button class="cat-tab" data-target="section-bricks" role="tab" id="tab-bricks" aria-controls="section-bricks"
+          aria-selected="false">🧱 Bricks</button>
+        <button class="cat-tab" data-target="section-conezilla" role="tab" id="tab-conezilla"
+          aria-controls="section-conezilla" aria-selected="false">🍦 Conezilla</button>
+      </div>
+
+      <!-- ══ ICE POP ══ -->
+      <div id="section-icepop" class="product-section active" role="tabpanel" aria-labelledby="tab-icepop">
+        <div class="product-showcase">
+          <!-- Left Flavors -->
+          <div class="flavor-nav left" aria-label="Ice Pop flavors">
+            <div class="flavor-card active" data-index="0" tabindex="0" role="button"
+              aria-label="Wild Blueberry flavor">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Wild Blueberry</div>
+              <div class="flavor-card-price">Rs 260</div>
+            </div>
+            <div class="flavor-card" data-index="1" tabindex="0" role="button"
+              aria-label="Desi Imlee Aloo Bukhara flavor">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name flavor-name-multiline">Desi Imlee &amp;<br>Aloo Bukhara</div>
+              <div class="flavor-card-price">Rs 260</div>
+            </div>
+            <div class="flavor-card" data-index="2" tabindex="0" role="button" aria-label="Juicy Pineapple flavor">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Juicy Pineapple</div>
+              <div class="flavor-card-price">Rs 260</div>
+            </div>
+          </div>
+
+          <!-- Center Visual -->
+          <div class="product-showcase-visual">
+            <div class="product-showcase-img-wrap">
+              <div class="product-showcase-glow"></div>
+              <img src="img/WB.png" alt="Wild Blueberry Ice Pop" class="showcase-product-img" loading="lazy">
+            </div>
+            <div class="product-main-info" style="margin-top:28px;">
+              <div class="product-main-category">Ice Pop Box — Pack of 12</div>
+              <div class="product-main-name">Wild Blueberry</div>
+              <div class="product-main-price">Rs 260</div>
+              <button class="product-order-btn" onclick="orderNow('Wild Blueberry Ice Pop Box')" id="icepop-order-btn"
+                aria-label="Order via WhatsApp">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Order on WhatsApp
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Flavors -->
+          <div class="flavor-nav right" aria-label="More Ice Pop flavors">
+            <div class="flavor-card" data-index="3" tabindex="0" role="button" aria-label="Energetic Strawberry flavor">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Energetic Strawberry</div>
+              <div class="flavor-card-price">Rs 260</div>
+            </div>
+            <div class="flavor-card" data-index="4" tabindex="0" role="button" aria-label="Cola Bomb flavor">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Cola Bomb</div>
+              <div class="flavor-card-price">Rs 260</div>
+            </div>
+            <div class="flavor-card" data-index="5" tabindex="0" role="button" aria-label="Lychee Fruity flavor">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Lychee Fruity</div>
+              <div class="flavor-card-price">Rs 260</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ CUPS ══ -->
+      <div id="section-cups" class="product-section" role="tabpanel" aria-labelledby="tab-cups">
+        <div class="product-showcase">
+          <div class="flavor-nav left" aria-label="Cup flavors">
+            <div class="flavor-card active" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Mango</div>
+              <div class="flavor-card-price">Rs 50</div>
+            </div>
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Strawberry</div>
+              <div class="flavor-card-price">Rs 50</div>
+            </div>
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Vanilla</div>
+              <div class="flavor-card-price">Rs 50</div>
+            </div>
+          </div>
+          <div class="product-showcase-visual">
+            <div class="product-showcase-img-wrap">
+              <div class="product-showcase-glow"></div>
+              <img src="img/MA.png" alt="Mango Ice Cream Cup" class="showcase-product-img" loading="lazy">
+            </div>
+            <div class="product-main-info" style="margin-top:28px;">
+              <div class="product-main-category">Ice Cream Cups</div>
+              <div class="product-main-name">Mango</div>
+              <div class="product-main-price">Rs 50</div>
+              <button class="product-order-btn" onclick="orderNow('Ice Cream Cup')" id="cups-order-btn"
+                aria-label="Order via WhatsApp">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Order on WhatsApp
+              </button>
+            </div>
+          </div>
+          <div class="flavor-nav right" aria-label="More Cup flavors">
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Kulfa</div>
+              <div class="flavor-card-price">Rs 50</div>
+            </div>
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Pista</div>
+              <div class="flavor-card-price">Rs 50</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ POPSICLE ══ -->
+      <div id="section-popsicle" class="product-section" role="tabpanel" aria-labelledby="tab-popsicle">
+        <div class="product-showcase">
+          <div class="flavor-nav left" aria-label="Popsicle flavors">
+            <div class="flavor-card active" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Mango Bite</div>
+              <div class="flavor-card-price">Rs 30</div>
+            </div>
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Orange Pop</div>
+              <div class="flavor-card-price">Rs 30</div>
+            </div>
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Falsa</div>
+              <div class="flavor-card-price">Rs 30</div>
+            </div>
+          </div>
+          <div class="product-showcase-visual">
+            <div class="product-showcase-img-wrap">
+              <div class="product-showcase-glow"></div>
+              <img src="img/popM.png" alt="Mango Bite Popsicle" class="showcase-product-img" loading="lazy">
+            </div>
+            <div class="product-main-info" style="margin-top:28px;">
+              <div class="product-main-category">Popsicle</div>
+              <div class="product-main-name">Mango Bite</div>
+              <div class="product-main-price">Rs 30</div>
+              <button class="product-order-btn" onclick="orderNow('Popsicle')" id="popsicle-order-btn"
+                aria-label="Order via WhatsApp">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Order on WhatsApp
+              </button>
+            </div>
+          </div>
+          <div class="flavor-nav right" aria-label="More Popsicle info"
+            style="justify-content:center;align-items:center;">
+            <p style="color:var(--text-muted);font-size:0.9rem;text-align:center;line-height:1.8;">Fresh fruity
+              popsicles<br>bursting with real fruit flavor.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ CHOCBARS ══ -->
+      <div id="section-chocbar" class="product-section" role="tabpanel" aria-labelledby="tab-chocbar">
+        <div class="product-showcase">
+          <div class="flavor-nav left" aria-label="Chocbar flavors">
+            <div class="flavor-card active" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Nutty Chocolate</div>
+              <div class="flavor-card-price">Rs 80</div>
+            </div>
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Choc Bar</div>
+              <div class="flavor-card-price">Rs 50</div>
+            </div>
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Choco Dip</div>
+              <div class="flavor-card-price">Rs 40</div>
+            </div>
+          </div>
+          <div class="product-showcase-visual">
+            <div class="product-showcase-img-wrap">
+              <div class="product-showcase-glow"></div>
+              <img src="img/choc1.png" alt="Nutty Chocolate Bar" class="showcase-product-img" loading="lazy">
+            </div>
+            <div class="product-main-info" style="margin-top:28px;">
+              <div class="product-main-category">Chocbars</div>
+              <div class="product-main-name">Nutty Chocolate</div>
+              <div class="product-main-price">Rs 80</div>
+              <button class="product-order-btn" onclick="orderNow('Chocbar')" id="chocbar-order-btn"
+                aria-label="Order via WhatsApp">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Order on WhatsApp
+              </button>
+            </div>
+          </div>
+          <div class="flavor-nav right" style="justify-content:center;align-items:center;">
+            <p style="color:var(--text-muted);font-size:0.9rem;text-align:center;line-height:1.8;">Rich chocolate
+              coating<br>over creamy ice cream.<br>Pure indulgence.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ KULFA ══ -->
+      <div id="section-kulfa" class="product-section" role="tabpanel" aria-labelledby="tab-kulfa">
+        <div class="product-showcase">
+          <div class="flavor-nav left" aria-label="Kulfa flavors">
+            <div class="flavor-card active" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Crunchy Badami</div>
+              <div class="flavor-card-price">Rs 80</div>
+            </div>
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Pista Delight</div>
+              <div class="flavor-card-price">Rs 80</div>
+            </div>
+          </div>
+          <div class="product-showcase-visual">
+            <div class="product-showcase-img-wrap">
+              <div class="product-showcase-glow"></div>
+              <img src="img/BKK.png" alt="Crunchy Badami Kulfa" class="showcase-product-img" loading="lazy">
+            </div>
+            <div class="product-main-info" style="margin-top:28px;">
+              <div class="product-main-category">Kulfa's</div>
+              <div class="product-main-name">Crunchy Badami</div>
+              <div class="product-main-price">Rs 80</div>
+              <button class="product-order-btn" onclick="orderNow('Kulfa')" id="kulfa-order-btn"
+                aria-label="Order via WhatsApp">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Order on WhatsApp
+              </button>
+            </div>
+          </div>
+          <div class="flavor-nav right" style="justify-content:center;align-items:center;">
+            <p style="color:var(--text-muted);font-size:0.9rem;text-align:center;line-height:1.8;">Traditional South
+              Asian<br>Kulfa — creamy, rich,<br>and utterly addictive.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ BRICKS ══ -->
+      <div id="section-bricks" class="product-section" role="tabpanel" aria-labelledby="tab-bricks">
+        <div class="product-showcase">
+          <div class="flavor-nav left" aria-label="Brick flavors">
+            <div class="flavor-card active" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Strawberry</div>
+              <div class="flavor-card-price">Rs 450</div>
+            </div>
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Kulfa</div>
+              <div class="flavor-card-price">Rs 450</div>
+            </div>
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Chocolate</div>
+              <div class="flavor-card-price">Rs 450</div>
+            </div>
+          </div>
+          <div class="product-showcase-visual">
+            <div class="product-showcase-img-wrap">
+              <div class="product-showcase-glow"></div>
+              <img src="img/SBB.png" alt="Strawberry Brick Pack" class="showcase-product-img" loading="lazy">
+            </div>
+            <div class="product-main-info" style="margin-top:28px;">
+              <div class="product-main-category">Brick Packs</div>
+              <div class="product-main-name">Strawberry</div>
+              <div class="product-main-price">Rs 450</div>
+              <button class="product-order-btn" onclick="orderNow('Brick Pack')" id="bricks-order-btn"
+                aria-label="Order via WhatsApp">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Order on WhatsApp
+              </button>
+            </div>
+          </div>
+          <div class="flavor-nav right" aria-label="More Brick flavors">
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Pista</div>
+              <div class="flavor-card-price">Rs 450</div>
+            </div>
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Mango</div>
+              <div class="flavor-card-price">Rs 450</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ CONEZILLA ══ -->
+      <div id="section-conezilla" class="product-section" role="tabpanel" aria-labelledby="tab-conezilla">
+        <div class="product-showcase">
+          <div class="flavor-nav left" aria-label="Conezilla flavors">
+            <div class="flavor-card active" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Chocolate</div>
+              <div class="flavor-card-price">Rs 80</div>
+            </div>
+            <div class="flavor-card" tabindex="0" role="button">
+              <div class="flavor-card-indicator"></div>
+              <div class="flavor-card-name">Strawberry</div>
+              <div class="flavor-card-price">Rs 80</div>
+            </div>
+          </div>
+          <div class="product-showcase-visual">
+            <div class="product-showcase-img-wrap">
+              <div class="product-showcase-glow"></div>
+              <img src="img/CCC.png" alt="Chocolate Conezilla" class="showcase-product-img" loading="lazy">
+            </div>
+            <div class="product-main-info" style="margin-top:28px;">
+              <div class="product-main-category">Conezilla</div>
+              <div class="product-main-name">Chocolate</div>
+              <div class="product-main-price">Rs 80</div>
+              <button class="product-order-btn" onclick="orderNow('Conezilla')" id="conezilla-order-btn"
+                aria-label="Order via WhatsApp">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="white" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Order on WhatsApp
+              </button>
+            </div>
+          </div>
+          <div class="flavor-nav right" style="justify-content:center;align-items:center;">
+            <p style="color:var(--text-muted);font-size:0.9rem;text-align:center;line-height:1.8;">The ultimate cone
+              experience.<br>Crispy wafer, generous<br>scoop, pure happiness.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+  ABOUT SECTION
+════════════════════════════════════════════ -->
+  <section class="about-section section-pad" id="about" aria-labelledby="about-heading">
+    <div class="gradient-mesh" style="opacity:0.3" aria-hidden="true"></div>
+    <div class="container-samsz">
+      <div class="about-grid">
+        <div class="about-img-wrap reveal">
+          <div class="about-img-main">
+            <img src="img/cover2.png" alt="SamsZ ice cream factory" loading="lazy">
+          </div>
+          <div class="about-img-badge">
+            <div class="about-badge-num">10<span style="font-size:1.2rem">+</span></div>
+            <div class="about-badge-label">Years of Crafting Joy</div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="section-label">Our Story</div>
+          <h2 class="section-heading" id="about-heading">Traditional &amp; Delicious <span class="accent">From Day
+              One</span></h2>
+          <p style="color:var(--text-muted);margin-bottom:24px;line-height:1.9;">
+            Welcome to SamsZ Ice Cream, where we've been crafting traditional ice cream from day one. Our passion is to
+            create the finest, most delicious ice cream that brings joy to every scoop.
+          </p>
+          <p style="color:var(--text-muted);margin-bottom:40px;line-height:1.9;">
+            We use only the highest quality ingredients, sourced from local farms and trusted suppliers. Our
+            time-honored recipes ensure each bite is rich, creamy, and bursting with authentic flavor.
+          </p>
+
+          <div class="about-features stagger-group">
+            <div class="about-feature stagger-item">
+              <div class="about-feature-icon">🥛</div>
+              <div class="about-feature-title">Premium Ingredients</div>
+              <div class="about-feature-text">Finest locally sourced milk and natural flavors in every batch.</div>
+            </div>
+            <div class="about-feature stagger-item">
+              <div class="about-feature-icon">✨</div>
+              <div class="about-feature-title">Innovative Flavors</div>
+              <div class="about-feature-text">From classic Mango to bold Cola Bomb — something for everyone.</div>
+            </div>
+            <div class="about-feature stagger-item">
+              <div class="about-feature-icon">🤲</div>
+              <div class="about-feature-title">Handmade with Care</div>
+              <div class="about-feature-text">Every product crafted with attention to detail and love.</div>
+            </div>
+            <div class="about-feature stagger-item">
+              <div class="about-feature-icon">🌿</div>
+              <div class="about-feature-title">Eco-Friendly</div>
+              <div class="about-feature-text">Committed to sustainable practices and responsible production.</div>
+            </div>
+          </div>
+
+          <div style="margin-top:40px;">
+            <a href="about.html" class="btn-primary-samsz" id="about-learn-btn">Learn More About Us <i
+                class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+  SERVICES SECTION
+════════════════════════════════════════════ -->
+  <section class="services-section section-pad" id="services" aria-labelledby="services-heading">
+    <div class="particles-bg" aria-hidden="true"></div>
+    <div class="container-samsz">
+      <div style="text-align:center;" class="reveal">
+        <div class="section-label" style="justify-content:center;">What We Offer</div>
+        <h2 class="section-heading" id="services-heading" style="text-align:center;">Best Services <span
+            class="accent">We Provide</span></h2>
+        <p class="section-subtext" style="margin:0 auto 60px;text-align:center;">Quality, hygiene, and customer joy — at
+          the heart of everything we do.</p>
+      </div>
+
+      <div class="services-grid stagger-group">
+        <div class="service-card stagger-item" data-tilt>
+          <div class="service-icon-wrap" aria-hidden="true">🏆</div>
+          <h3 class="service-card-title">Quality Maintained</h3>
+          <p class="service-card-text">We use only the finest ingredients and follow strict quality control measures to
+            ensure every scoop is perfect. Experience exceptional taste and texture.</p>
+        </div>
+        <div class="service-card stagger-item" data-tilt>
+          <div class="service-icon-wrap" aria-hidden="true">🎯</div>
+          <h3 class="service-card-title">Individual Approach</h3>
+          <p class="service-card-text">At SamsZ, we tailor our flavors to delight every individual. Our unique recipes
+            and personalized service ensure each customer's experience is one-of-a-kind.</p>
+        </div>
+        <div class="service-card stagger-item" data-tilt>
+          <div class="service-icon-wrap" aria-hidden="true">🧼</div>
+          <h3 class="service-card-title">Food Hygiene</h3>
+          <p class="service-card-text">Your health and safety are our top priorities. We adhere to the highest standards
+            of food hygiene, ensuring every scoop is prepared with utmost care and cleanliness.</p>
+        </div>
+        <div class="service-card stagger-item" data-tilt>
+          <div class="service-icon-wrap" aria-hidden="true">🛵</div>
+          <h3 class="service-card-title">Doorstep Delivery</h3>
+          <p class="service-card-text">SamsZ delivers your favorite frozen treats with utmost care. Order via WhatsApp
+            and enjoy premium ice cream fresh at your doorstep, on time, every time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+  PROMOTION / ORDER SECTION
+════════════════════════════════════════════ -->
+  <section class="promo-section section-pad" id="order" aria-labelledby="promo-heading">
+    <div class="container-samsz">
+      <div class="promo-inner reveal">
+        <div class="promo-visual" aria-hidden="true">
+          <img src="img/cover2.png" alt="SamsZ delivery" loading="lazy">
+        </div>
+        <div class="promo-content">
+          <div class="promo-badge">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="#25d366" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Order Online Now
+          </div>
+          <h2 class="promo-heading" id="promo-heading">Life's Sweetest Moments <span class="accent">Delivered</span>
+          </h2>
+          <p class="promo-text">
+            With SamsZ, your favorite ice cream is just a tap away! Order your exclusive range and have it delivered
+            straight to your doorstep. It's that easy to indulge!
+          </p>
+          <a href="https://api.whatsapp.com/send?phone=923112811272&text=Hello%21%20I%20want%20to%20order%20SamsZ%20Ice%20Cream%20%F0%9F%8D%A6"
+            target="_blank" rel="noopener" class="whatsapp-btn" id="promo-wa-btn" aria-label="Order via WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Chat &amp; Order Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+  FOOTER
+════════════════════════════════════════════ -->
+  <footer class="footer" aria-labelledby="footer-heading">
+    <div class="container-samsz">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/samsz-logo.png" alt="SamsZ Ice Cream" loading="lazy">
+          <p class="footer-brand-text">
+            Premium handcrafted ice cream from the heart of Karachi. Made with love, served with joy — since day one.
+          </p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="#" class="footer-social-btn" aria-label="Twitter"><i class="fab fa-twitter"
+                aria-hidden="true"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"
+                aria-hidden="true"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="fab fa-instagram"
+                aria-hidden="true"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=923112811272" target="_blank" rel="noopener"
+              class="footer-social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title" id="footer-heading">Quick Links</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="product.html">Products</a></li>
+            <!--<li><a href="gallery.html">Gallery</a></li>-->
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Get In Touch</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="tel:+923112811272">📞 +92-311-2811272</a></li>
+            <li><span style="color:var(--text-muted)">📍 Factory Outlet, Karachi, Pakistan</span></li>
+            <li><span style="color:var(--text-muted)">🕐 Mon–Sat: 10AM – 12AM</span></li>
+            <li><a href="https://api.whatsapp.com/send?phone=923112811272" target="_blank" rel="noopener"
+                style="color:#25d366;">💬 WhatsApp Order</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 <a href="index.html">SamsZ Ice Cream</a>. All Rights Reserved.</p>
+        <p>Designed by <a href="#">sailorcarft</a></p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════
+  FLOATING WHATSAPP BUTTON
+════════════════════════════════════════════ -->
+  <a href="https://api.whatsapp.com/send?phone=923112811272&text=Hello%21%20I%20want%20to%20order%20SamsZ%20Ice%20Cream%20%F0%9F%8D%A6"
+    target="_blank" rel="noopener" class="wa-float" id="wa-float-btn" aria-label="Order via WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+    <span class="wa-float-text">Order Now</span>
+  </a>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-top" id="back-top-btn" aria-label="Back to top">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+  </a>
+
+  <!-- ═══════════════════════════════════════════
+  SCRIPTS
+════════════════════════════════════════════ -->
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Vanilla Tilt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Font Awesome Kit (for brand icons) -->
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

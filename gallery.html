@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gallery — SamsZ Ice Cream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Take a visual tour of SamsZ Ice Cream. View our premium handcrafted cones, classic vanilla, and chocolate flavors made in Karachi, Pakistan.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Custom Lightbox Modal Styles */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 8, 15, 0.95);
+      backdrop-filter: blur(15px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .lightbox-modal.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 85%;
+      max-height: 85%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: 75vh;
+      border-radius: var(--radius-md);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+      border: 1px solid var(--border-glass);
+    }
+
+    .lightbox-caption {
+      margin-top: 20px;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-white);
+      text-align: center;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      background: none;
+      border: none;
+      color: var(--text-white);
+      font-size: 3rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .lightbox-close:hover {
+      color: var(--accent-pink);
+      transform: rotate(90deg);
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--bg-glass);
+      border: 1px solid var(--border-glass);
+      color: var(--text-white);
+      font-size: 2rem;
+      padding: 15px 22px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .lightbox-prev:hover,
+    .lightbox-next:hover {
+      background: var(--accent-pink);
+      border-color: var(--accent-pink);
+    }
+
+    .lightbox-prev {
+      left: 40px;
+    }
+
+    .lightbox-next {
+      right: 40px;
+    }
+
+    @media (max-width: 768px) {
+
+      .lightbox-prev,
+      .lightbox-next {
+        padding: 10px 15px;
+        font-size: 1.5rem;
+      }
+
+      .lightbox-prev {
+        left: 15px;
+      }
+
+      .lightbox-next {
+        right: 15px;
+      }
+
+      .lightbox-close {
+        top: 20px;
+        right: 20px;
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-outline" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar-samsz" id="navbar" aria-label="Main navigation">
+      <div class="navbar-inner">
+        <a href="index.html" class="nav-logo" aria-label="SamsZ Home"><img src="img/samsz-logo.png" alt="SamsZ Logo"
+            width="70"></a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="contact.html" class="nav-cta" id="nav-contact-btn">Order Now</a></li>
+        </ul>
+        <button class="nav-hamburger" id="hamburger"
+          aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <button type="button" class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="mobile-menu-inner">
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="gradient-mesh" aria-hidden="true"></div>
+    <div class="particles-bg" aria-hidden="true"></div>
+    <div class="floating-icons" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <h1 class="page-hero-title" id="page-title">Our <span class="accent">Gallery</span></h1>
+      <div class="breadcrumb-samsz" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Gallery</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery-section section-pad" aria-labelledby="gallery-heading">
+    <div class="container-samsz">
+      <div style="text-align:center;" class="reveal">
+        <div class="section-label" style="justify-content:center;">Sweet Visuals</div>
+        <h2 class="section-heading" id="gallery-heading" style="text-align:center;">Handcrafted <span
+            class="accent">Masterpieces</span></h2>
+        <p class="section-subtext" style="margin:0 auto 40px; text-align:center;">Delicious ice cream made from our very
+          own fresh, organic milk.</p>
+      </div>
+
+      <!-- Category Tabs / Filters -->
+      <div class="category-tabs reveal" role="group" aria-label="Gallery filters"
+        style="margin-bottom:40px; justify-content:center;">
+        <button class="cat-tab active" data-filter="all">All</button>
+        <button class="cat-tab" data-filter="cone">Cone</button>
+        <button class="cat-tab" data-filter="vanilla">Vanilla</button>
+        <button class="cat-tab" data-filter="chocolate">Chocolate</button>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <!-- Item 1 (Cone) -->
+        <div class="gallery-item cone" data-caption="Classic Cone" tabindex="0" role="button">
+          <img src="img/portfolio-1.jpg" alt="Classic Cone">
+          <div class="gallery-item-overlay">
+            <div style="font-family:var(--font-display); font-weight:700; font-size:1.1rem;">Classic Cone</div>
+          </div>
+        </div>
+
+        <!-- Item 2 (Vanilla) -->
+        <div class="gallery-item vanilla" data-caption="Creamy Vanilla" tabindex="0" role="button">
+          <img src="img/portfolio-2.jpg" alt="Creamy Vanilla">
+          <div class="gallery-item-overlay">
+            <div style="font-family:var(--font-display); font-weight:700; font-size:1.1rem;">Creamy Vanilla</div>
+          </div>
+        </div>
+
+        <!-- Item 3 (Chocolate) -->
+        <div class="gallery-item chocolate" data-caption="Choco Delight" tabindex="0" role="button">
+          <img src="img/portfolio-3.jpg" alt="Choco Delight">
+          <div class="gallery-item-overlay">
+            <div style="font-family:var(--font-display); font-weight:700; font-size:1.1rem;">Choco Delight</div>
+          </div>
+        </div>
+
+        <!-- Item 4 (Cone) -->
+        <div class="gallery-item cone" data-caption="Double Scoop Cone" tabindex="0" role="button">
+          <img src="img/portfolio-4.jpg" alt="Double Scoop Cone">
+          <div class="gallery-item-overlay">
+            <div style="font-family:var(--font-display); font-weight:700; font-size:1.1rem;">Double Scoop Cone</div>
+          </div>
+        </div>
+
+        <!-- Item 5 (Vanilla) -->
+        <div class="gallery-item vanilla" data-caption="Vanilla Sundae" tabindex="0" role="button">
+          <img src="img/portfolio-5.jpg" alt="Vanilla Sundae">
+          <div class="gallery-item-overlay">
+            <div style="font-family:var(--font-display); font-weight:700; font-size:1.1rem;">Vanilla Sundae</div>
+          </div>
+        </div>
+
+        <!-- Item 6 (Chocolate) -->
+        <div class="gallery-item chocolate" data-caption="Chocolate Fudge" tabindex="0" role="button">
+          <img src="img/portfolio-6.jpg" alt="Chocolate Fudge">
+          <div class="gallery-item-overlay">
+            <div style="font-family:var(--font-display); font-weight:700; font-size:1.1rem;">Chocolate Fudge</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Lightbox Overlay -->
+  <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image lightbox">
+    <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-prev" id="lightbox-prev-btn" aria-label="Previous image">&#10094;</button>
+    <button class="lightbox-next" id="lightbox-next-btn" aria-label="Next image">&#10095;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-labelledby="footer-label">
+    <div class="container-samsz">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/samsz-logo.png" alt="SamsZ Ice Cream" loading="lazy">
+          <p class="footer-brand-text">Premium handcrafted ice cream from the heart of Karachi. Made with love, served
+            with joy.</p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="#" class="footer-social-btn" aria-label="Twitter"><i class="fab fa-twitter"
+                aria-hidden="true"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"
+                aria-hidden="true"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="fab fa-instagram"
+                aria-hidden="true"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=923112811272" target="_blank" rel="noopener"
+              class="footer-social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-col-title" id="footer-label">Quick Links</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Get In Touch</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="tel:+923112811272">📞 +92-311-2811272</a></li>
+            <li><span style="color:var(--text-muted)">📍 Factory Outlet, Karachi, Pakistan</span></li>
+            <li><span style="color:var(--text-muted)">🕐 Mon–Sat: 10AM – 12AM</span></li>
+            <li><a href="https://api.whatsapp.com/send?phone=923112811272" target="_blank" rel="noopener"
+                style="color:#25d366;">💬 WhatsApp Order</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 <a href="index.html">SamsZ Ice Cream</a>. All Rights Reserved.</p>
+        <p>Designed by <a href="#">Asif Ali Mallah</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://api.whatsapp.com/send?phone=923112811272&text=Hello%21%20I%20want%20to%20order%20SamsZ%20Ice%20Cream%20%F0%9F%8D%A6"
+    target="_blank" rel="noopener" class="wa-float" id="wa-float-btn" aria-label="Order on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+    <span class="wa-float-text">Order Now</span>
+  </a>
+  <a href="#" class="back-top" id="back-top-btn" aria-label="Back to top"><i class="fa fa-angle-up"
+      aria-hidden="true"></i></a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Gallery Filter Logic
+      const filterButtons = document.querySelectorAll('.cat-tab');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filterValue = btn.dataset.filter;
+
+          galleryItems.forEach(item => {
+            if (filterValue === 'all' || item.classList.contains(filterValue)) {
+              gsap.to(item, { scale: 1, opacity: 1, duration: 0.4, display: 'block' });
+            } else {
+              gsap.to(item, { scale: 0.8, opacity: 0, duration: 0.4, display: 'none' });
+            }
+          });
+        });
+      });
+
+      // Custom Lightbox Logic
+      const lightboxModal = document.getElementById('lightbox-modal');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const closeBtn = document.getElementById('lightbox-close-btn');
+      const prevBtn = document.getElementById('lightbox-prev-btn');
+      const nextBtn = document.getElementById('lightbox-next-btn');
+
+      let activeItems = Array.from(galleryItems);
+      let currentIndex = 0;
+
+      function getVisibleItems() {
+        const activeTab = document.querySelector('.cat-tab.active').dataset.filter;
+        if (activeTab === 'all') {
+          return Array.from(galleryItems);
+        }
+        return Array.from(galleryItems).filter(item => item.classList.contains(activeTab));
+      }
+
+      function openLightbox(index) {
+        activeItems = getVisibleItems();
+        currentIndex = index;
+        const targetItem = activeItems[currentIndex];
+        if (!targetItem) return;
+
+        const img = targetItem.querySelector('img');
+        const caption = targetItem.getAttribute('data-caption');
+
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = caption;
+
+        lightboxModal.classList.add('open');
+        lightboxModal.setAttribute('aria-hidden', 'false');
+      }
+
+      function closeLightbox() {
+        lightboxModal.classList.remove('open');
+        lightboxModal.setAttribute('aria-hidden', 'true');
+      }
+
+      function showPrev() {
+        activeItems = getVisibleItems();
+        currentIndex = (currentIndex - 1 + activeItems.length) % activeItems.length;
+        openLightbox(currentIndex);
+      }
+
+      function showNext() {
+        activeItems = getVisibleItems();
+        currentIndex = (currentIndex + 1) % activeItems.length;
+        openLightbox(currentIndex);
+      }
+
+      galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+          activeItems = getVisibleItems();
+          const index = activeItems.indexOf(item);
+          if (index !== -1) {
+            openLightbox(index);
+          }
+        });
+
+        // Accessibility keypress
+        item.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            activeItems = getVisibleItems();
+            const index = activeItems.indexOf(item);
+            if (index !== -1) {
+              openLightbox(index);
+            }
+          }
+        });
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+      prevBtn.addEventListener('click', showPrev);
+      nextBtn.addEventListener('click', showNext);
+
+      // Close on overlay click
+      lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) {
+          closeLightbox();
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (!lightboxModal.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+      });
+    });
+  </script>
+</body>
+
+</html>
